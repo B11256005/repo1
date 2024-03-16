@@ -8,29 +8,31 @@
 </head>
 
 <body>
-    <script>
-        var a = prompt("請輸入分數:"),
-            v
-        switch (exp) {
+    <script type="text/javascript">
+        var a = prompt("請輸入分數:");
+        switch (true) {
             case a < 60: //低於60
-                alert('不及格，請再加強');
+                document.write("不及格，請再加強");
                 break;
 
-            case a >= 60 & a < 70: //60~69
-                alert('及格，但有進步空間!');
+            case a >= 60 && a < 70: //60~69
+                document.write('及格，但有進步空間!');
                 break;
 
-            case a >= 70 & a < 80: //70~79
-                alert('及格，程度達到標準');
+            case a >= 70 && a < 80: //70~79
+                document.write('及格，程度達到標準');
                 break;
 
-            case a >= 80 & a < 90: //80~89
-                alert('及格，接近完美!');
+            case a >= 80 && a < 90: //80~89
+                document.write('及格，接近完美!');
                 break;
 
-            case a >= 90 & a == 100: //90~100
-                alert('及格，超強，好好保持!');
+            case a >= 90 && a <= 100: //90~100
+                document.write('及格，超強，好好保持!');
                 break;
+
+            default:
+                document.write("請輸入有效的分數");
         }
     </script>
 </body>

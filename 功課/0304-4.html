@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = Math.floor(Math.random() * 51);
+        var b = prompt("請輸入1~50的數字"),
+            time = 1
+        while (b != a) {
+            if (b > a)
+                alert("太大了，請輸入1~ " + b + "之間的數字");
+            else if (b < a)
+                alert("太小了，請輸入" + b + "~50之間的數字");
+            time = time + 1
+            b = prompt("再試一次，請輸入數字");
+            alert("答對了");
+            document.write("恭喜你答對了，總共輸入了" + time + "次");
+            break;
+        }
+    </script>
+</body>
+
+</html>
