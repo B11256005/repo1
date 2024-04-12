@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>匯率計算器</title>
+</head>
+<body>
+    <div id="output">匯率計算結果將顯示在這裡</div>
+
+    <script>
+        // 请求用户输入匯率，并转换成数字类型
+        var exchangeRate = parseFloat(prompt("請輸入物品的匯率"));
+        var obj = parseFloat(prompt("請輸入原價"));
+
+        function total(obj, rate) {
+            return obj * rate;  // 计算结果
+        }
+
+        // 使用 total 函数计算结果
+        var result = total(obj, exchangeRate);
+
+        // 使用 document.getElementById().innerHTML 来输出计算结果
+        document.getElementById('output').innerHTML = "物品的換算結果: " + result.toFixed(0);
+    </script>
+</body>
+</html>
