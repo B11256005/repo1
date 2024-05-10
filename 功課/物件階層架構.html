@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = prompt("輸入姓名");
+        var phone = prompt("輸入電話");
+        var id = prompt("輸入身分證");
+
+        function checkGender(idNumber) {
+            var lastDigit = parseInt(idNumber.substr(-1));
+            if (lastDigit % 2 === 0) {
+                return "女性";
+            } else {
+                return "男性";
+            }
+        }
+
+        var gender = checkGender(id);
+
+        document.write("姓名: " + name + "<br/>");
+        document.write("電話: " + phone + "<br/>");
+        document.write("身分證: " + id + "<br/>");
+        document.write("性別: " + gender + "<br/>");
+    </script>
+</body>
+
+</html>
