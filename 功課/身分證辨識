@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class UserInfo {
+            constructor(name, idNumber, phone) {
+                this.name = name;
+                this.idNumber = idNumber.toUpperCase(); // 轉換為大寫
+                this.phone = phone;
+            }
+
+            validateIdNumber() {
+                return this.idNumber.length === 10; // 檢查身分證字號長度是否為10
+            }
+
+            getBirthplace() {
+                const firstLetter = this.idNumber.charAt(0);
+                const birthplaceDict = {
+                    'A': '台北市',
+                    'B': '台中市',
+                    'C': '基隆市',
+                    'D': '台南市',
+                    'E': '高雄市',
+                    'F': '台北市',
+                    'G': '宜蘭市',
+                    'H': '桃園市',
+                    'I': '嘉義市',
+                    'J': '新竹市',
+                    'K': '苗栗市',
+                    'L': '台中縣',
+                    'M': '南投縣',
+                    'N': '彰化縣',
+                    'O': '新竹市',
+                    'P': '雲林縣',
+                    'Q': '嘉義縣',
+                    'R': '台南縣',
+                    'S': '高雄縣',
+                    'T': '屏東縣',
+                    'U': '花蓮縣',
+                    'V': '台東縣',
+                    'W': '金門縣',
+                    'X': '澎湖縣',
+                    'Y': '陽明山',
+                    'Z': '連江縣',
+                };
+                return birthplaceDict[firstLetter] || '未知';
+            }
+
+            getGender() {
+                const secondDigit = parseInt(this.idNumber.charAt(1), 10);
+                return secondDigit % 2 === 0 ? '女性' : '男性';
+            }
+        }
+
+        // 使用範例
+        const name = prompt("請輸入姓名：");
+        const idNumber = prompt("請輸入身分證字號：");
+        const phone = prompt("請輸入電話：");
+
+        const userInfo = new UserInfo(name, idNumber, phone);
+
+        if (userInfo.validateIdNumber()) {
+            console.log("身分證字號合法");
+            console.log("出生地:", userInfo.getBirthplace());
+            console.log("性別:", userInfo.getGender());
+            document.write('您的姓名：' + userInfo.name + "<br/>");
+            document.write('您的身分證字號：' + userInfo.idNumber + "<br/>");
+            document.write('您的性別：' + userInfo.getGender() + "<br/>");
+            document.write('您的電話號碼：' + userInfo.phone + "<br/>");
+            document.write('您的出生地：' + userInfo.getBirthplace() + "<br/>");
+        } else {
+            console.log("身分證字號不合法");
+            document.write('身分證字號不合法');
+        }
+    </script>
+</body>
+
+</html>
