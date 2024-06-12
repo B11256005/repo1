@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("背景-2.webp");
+    background-size: cover;
+}
+
+.header {
+    background-color: antiquewhite;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .content {
+        padding: 50px;
+    }
+}
+
+@media only screen and (min-resolution: 2dppx) {
+    /* 根據解析度調整內容 */
+    .content {
+        font-size: 20px;
+    }
+}
+
+ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 0;
+    margin: 5px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+.p1 {
+    font-size: 50pt;
+    letter-spacing: 2px;
+}
+
+.p2 {
+    font-size: 30pt;
+    letter-spacing: 2px;
+}
